@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  ShowHideSideBar=false;
+
+  ShowSideBar():void
+  {
+    this.ShowHideSideBar=!this.ShowHideSideBar;
+  }
 }

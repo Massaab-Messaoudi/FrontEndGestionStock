@@ -1,2 +1,14 @@
-<h2>Welcome</h2>
-<app-produit></app-produit>
+<div class="row">
+    <div class="col-lg-2" *ngIf="ShowHideSideBar">
+        <app-sidebar></app-sidebar>  
+    </div>
+    <div class="col-lg-10">
+        <button class="btn btn-success" (click)="ShowSideBar()">Show/hide Side Bar</button>
+        <app-navbar></app-navbar>
+        <app-content></app-content>
+    </div>
+
+</div>
+
+
+
