@@ -1,10 +1,13 @@
-<div class="row">
+<div class="row body">
     <div class="col-lg-2" *ngIf="ShowHideSideBar">
         <app-sidebar></app-sidebar>  
     </div>
     <div class="col-lg-10">
-        <button class="btn btn-success" (click)="ShowSideBar()">Show/hide Side Bar</button>
-        <app-navbar></app-navbar>
+       
+        <app-navbar 
+        [Showsidebar]=" ShowHideSideBar"
+        (Showsidebarchange)="showbar($event)"
+        ></app-navbar>
         <app-content></app-content>
     </div>
 
