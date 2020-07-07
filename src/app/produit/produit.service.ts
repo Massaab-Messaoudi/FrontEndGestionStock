@@ -27,10 +27,11 @@ export class ProduitService
    {
       return this.http.put(API_URLS.PRODUIS_URL,prod);
    }
-   deleteProduit(ref :string):Observable<any>
+   deleteProduit(id :number):Observable<any>
    {
       //return this.http.delete<Produit>('$'+API_URLS.PRODUIS_URL + "/${prod}");
-      return this.http.delete<Produit>(API_URLS.PRODUIS_URL+'/'+ref);
+      console.log('id = '+id);
+      return this.http.delete<Produit>(API_URLS.PRODUIS_URL+'/'+id);
       
       
      

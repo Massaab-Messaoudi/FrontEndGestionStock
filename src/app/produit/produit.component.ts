@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import{ProduitService} from './produit.service'
 import{Produit} from '../shared/Produit';
 import{FormGroup,FormBuilder,Validators} from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-produit',
@@ -16,7 +17,7 @@ export class ProduitComponent implements OnInit {
   public errorMsg;
   produitsform:FormGroup;
   operation:string='add';
-  constructor(private produitservice:ProduitService,private fb:FormBuilder) 
+  constructor(private produitservice:ProduitService,private fb:FormBuilder,private route:ActivatedRoute) 
   {
     // init the form
     this.createForm();
@@ -25,8 +26,13 @@ export class ProduitComponent implements OnInit {
 
   ngOnInit(): void {
     this.initProduit ();
-    this.LoadProduit();
+    // get the liste of produit from the server by the using 'produit.resolver.ts' and 'app.routing.module.ts'
+    this.produits=this.route.snapshot.data.produits;
   }
+
+  /**
+   * get the liste of produit using 'HttpClient'
+   */
   LoadProduit() :void 
   {
 
@@ -71,12 +77,13 @@ export class ProduitComponent implements OnInit {
   {
     
     
-    this.produitservice.deleteProduit(this.selectedProduit.ref).subscribe
+    this.produitservice.deleteProduit(this.selectedProduit.id).subscribe
     (
       res => 
       {
         this.selectedProduit=new Produit();
         this.LoadProduit();
+        this.operation='add';
       }
     );
   }

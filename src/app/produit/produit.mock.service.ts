@@ -7,9 +7,9 @@ export class ProduiMockService
    private Produits:Produit[]=[];
     constructor()
     {
-     let P1: Produit = new Produit('livre',50,20);
-     let P2: Produit = new Produit('Cahier',200,5.20);
-     let P3: Produit = new Produit('stylo',150,10);
+     let P1: Produit = new Produit(1,'livre',50,20);
+     let P2: Produit = new Produit(2,'Cahier',200,5.20);
+     let P3: Produit = new Produit(3,'stylo',150,10);
      this.Produits.push(P1);
      this.Produits.push(P2);
      this.Produits.push(P3);
