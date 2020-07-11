@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
       password:['',Validators.required],
     });
   }
-  
   login()
   {
     // open the page /home/produit if the login info are correct

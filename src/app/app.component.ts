@@ -23,7 +23,6 @@ export class AppComponent implements OnInit{
     // if the user is not authenticated yet , redige it to the login page
     if(!this.appservice.authenticated)
     {
-
       this.router.navigateByUrl('/login');
     }
     else

@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 
 describe('AppService', () => {
   let service: AppService;
-
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(AppService);

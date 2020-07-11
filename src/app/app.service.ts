@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AppService {
   authenticated:boolean=false;
-  constructor() { }
+  constructor() { 
+    
+  }
   /**
    * 
    * @param UserLogin in this obj we found the username and the pw
@@ -15,6 +17,7 @@ export class AppService {
     /**
      * check if credentials!=null && username and the pw are correct
      */
+    
     if(UserLogin && UserLogin.username == 'root' && UserLogin.password == "root")
     {
       this.authenticated=true;

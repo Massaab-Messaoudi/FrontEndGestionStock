@@ -34,7 +34,6 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule
-    
   ],
   providers: [ProduiMockService,ProduitService,AppService],
   bootstrap: [AppComponent]

@@ -21,7 +21,6 @@ const routes: Routes = [
       }, 
       {path:'dashbord' ,component :DashbordComponent,outlet:"ContentOutlet"},
     ]
-  
   },
   {path :'login' ,component : LoginComponent},
   {path:'',redirectTo:"/home",pathMatch:'full'}  // path par default
