@@ -2,10 +2,10 @@
     <ul class="nav nav-pills flex-column">
         
         <li class="nav-item"> 
-            <a class="nav-link" routerLink="/dashbord" routerLinkActive="active">Dashbord</a>
+            <a class="nav-link" [routerLink]="[{outlets :{ContentOutlet:'dashbord'}}]" routerLinkActive="active">Dashbord</a>
         </li>
         <li class="nav-item"> 
-            <a class="nav-link" routerLink="/produit" routerLinkActive="active">Produit</a>
+            <a class="nav-link" [routerLink]="[{outlets :{ContentOutlet:'produit'}}]" routerLinkActive="active">Produit</a>
         </li>
         <li class="nav-item"> 
             <a class="nav-link" href="#">Export</a>

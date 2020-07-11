@@ -20,4 +20,8 @@ export class NavbarComponent implements OnInit {
     this.Showsidebar=!this.Showsidebar;
     this.Showsidebarchange.emit(this.Showsidebar);
   }
+  logout()
+  {
+    
+  }
 }
