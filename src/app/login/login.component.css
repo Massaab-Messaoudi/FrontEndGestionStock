@@ -1,9 +1,12 @@
-#test
+/*#test
 {
    padding-top:150px;
    
-}
-#btn
-{
-    padding-top: 2px;
+}*/
+
+.big-banner{
+   background-image: url('../images/bg.jpg');
+   background-size: 100%;
+   height: 100vh; 
+   
 }

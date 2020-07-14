@@ -1,14 +1,15 @@
-<div > 
-  <form [formGroup]="loginform" (submit)="login()">
-    <div>
-        <label>Username</label>
-        <input type="text"  id="username" name= "username" formControlName= "username" [(ngModel)]="UserLogin.username" /> 
-    </div>
-    <div>
-     <label>Password</label>
-     <input type="password" id ="password" name="password" formControlName="password" [(ngModel)]="UserLogin.password" /> 
-    </div>
-    <button type="submit">Login</button>
+
+
+<nav class="navbar navbar-dark bg-dark">
+  <form class="form-inline" [formGroup]="loginform" (submit)="login()">
+  <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" id="username" name= "username" formControlName= "username" [(ngModel)]="UserLogin.username">
+  <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="password" id="password" name= "password" formControlName="password" [(ngModel)]="UserLogin.password">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
   </form>
- </div>
- 
+</nav>
+<div class="big-banner">
+  
+</div>
+
+
+
