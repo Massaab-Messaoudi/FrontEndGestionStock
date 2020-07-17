@@ -13,12 +13,6 @@ export class AppComponent implements OnInit{
   {
 
   }
-  /*ShowHideSideBar:boolean =false;
-
-  showbar(x):void
-  {
-    this.ShowHideSideBar=x;
-  }*/
   ngOnInit(): void {
     // if the user is not authenticated yet , redige it to the login page
     if(!this.appservice.authenticated)

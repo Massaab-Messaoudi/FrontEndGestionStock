@@ -1,5 +1,6 @@
 import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 //import { EventEmitter } from 'protractor';
 
 @Component({
@@ -12,7 +13,7 @@ export class NavbarComponent implements OnInit {
   Showsidebar:boolean;
   @Output()
   Showsidebarchange:EventEmitter<boolean>=new EventEmitter<boolean>();
-  constructor(private router :Router) {
+  constructor(private router :Router , private appservice:AppService) {
     
    }
 
@@ -25,6 +26,6 @@ export class NavbarComponent implements OnInit {
   }
   logout()
   {
-    this.router.navigateByUrl('/login');
+    this.appservice.Logout(()=>{this.router.navigateByUrl('/login')});
   }
 }
