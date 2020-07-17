@@ -15,7 +15,7 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { XhrInterceptor } from './xhr.interceptor';
-
+import{CookieService} from 'ngx-cookie-service';
 
 
 
@@ -39,7 +39,8 @@ import { XhrInterceptor } from './xhr.interceptor';
     HttpClientModule
   ],
   providers: [ProduiMockService,ProduitService,AppService,
-  {provide:HTTP_INTERCEPTORS,useClass:XhrInterceptor,multi:true}
+  {provide:HTTP_INTERCEPTORS,useClass:XhrInterceptor,multi:true},
+  CookieService
   ],
   bootstrap: [AppComponent]
 })
