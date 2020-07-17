@@ -6,6 +6,7 @@ import {ProduitResolver} from './produit/produit.resolver';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
+
 // appRoutes c'est liste de routes
 const routes: Routes = [
   
@@ -23,6 +24,7 @@ const routes: Routes = [
     ]
   },
   {path :'login' ,component : LoginComponent},
+ 
   {path:'',redirectTo:"/home",pathMatch:'full'}  // path par default
 ];
 

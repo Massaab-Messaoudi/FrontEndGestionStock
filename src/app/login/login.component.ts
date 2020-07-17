@@ -17,14 +17,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
     this.loginform=this.fb.group({
-      username:['',Validators.required],
-      password:['',Validators.required],
+      username:['',Validators.compose([Validators.required,Validators.minLength(3)])],
+      password:['',Validators.compose([Validators.required,Validators.minLength(3)])],
+      /*username:['',Validators.required],
+      password:['',Validators.required],*/
     });
   }
   login()
   {
     // open the page /home/produit if the login info are correct
-    this.appservice.Login(this.UserLogin,()=>{this.router.navigateByUrl('/home/(ContentOutlet:produit)')});
+    this.appservice.Login(this.UserLogin,()=>{this.router.navigateByUrl('/home)')});
   }
 }
  
