@@ -1,15 +1,29 @@
 
-
-<nav class="navbar navbar-dark bg-dark">
-  <form class="form-inline" [formGroup]="loginform" (submit)="login()">
-  <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username" id="username" name= "username" formControlName= "username" [(ngModel)]="UserLogin.username">
-  <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="password" id="password" name= "password" formControlName="password" [(ngModel)]="UserLogin.password">
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-  </form>
-</nav>
-<div class="big-banner">
+   <form [formGroup]="loginform" (submit)="login()">
+    <div class="imgcontainer">
+      <img src="https://ems1.co.za/images/dessin-livraison.jpg" alt="Avatar" class="avatar">
+    </div>
   
-</div>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" id="username" name= "username" formControlName= "username" [(ngModel)]="UserLogin.username" />
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id ="password" name="password" formControlName="password" [(ngModel)]="UserLogin.password" /> 
+          
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+
+
 
 
 

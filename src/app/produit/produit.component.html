@@ -16,7 +16,7 @@
                 <tr *ngFor="let prod of produits">
                     <td>{{prod.ref}}</td><td>{{prod.quantitie}}</td><td>{{prod.prixunit}}</td>
                     <td>
-                      <button class=" btn btn-outline-primary" (click)="operation = 'edit' ; selectedProduit = prod ;">Edir</button>
+                      <button class=" btn btn-outline-primary" (click)="operation = 'edit' ; selectedProduit = prod ;">Edit</button>
                       <button class=" btn btn-outline-danger" (click)="operation = 'remove' ; selectedProduit=prod ;">Remove</button>
                     </td>
                 </tr>
