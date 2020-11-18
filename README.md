@@ -2,8 +2,7 @@
 # Login_information
 username :root
 password:root 
-
-# SuperUser
+/ the Login info for the SuperUser are :
 username: admin
 password: admin
 
