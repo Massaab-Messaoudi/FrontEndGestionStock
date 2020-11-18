@@ -2,6 +2,9 @@
 # Login_information
 username :root
 password:root 
+SuperUser :
+username:admin
+password:admin
 
 # Frontend
 
